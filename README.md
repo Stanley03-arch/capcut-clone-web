@@ -1,36 +1,35 @@
-# NovaCut Pro — CapCut-style Editor
+# NovaCut — CapCut-style Video Editor
 
 **Privacy-first • No watermarks • Local-only • Open source**
 
-![Status](https://img.shields.io/badge/Status-v1.4%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-v2.0-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## v1.4 upgrades
+> **Honest note:** This is **not** a full CapCut clone. CapCut is a commercial product with native apps, AI, cloud, and huge asset libraries. NovaCut is a strong **CapCut-inspired** open-source editor for the browser (and Electron).
 
-- **Keyframes** — opacity, scale, position over time
-- **FFmpeg export** — keeps **audio**, burns **text/captions** into MP4
-- IndexedDB media restore
-- Auto captions, freeze, stickers, voiceover
-- Electron desktop shell
+## CapCut-like features in v2.0
+
+| Area | Features |
+|------|----------|
+| Timeline | Multi-track, trim, split, freeze, ripple, snap, markers |
+| Motion | Keyframes (opacity / scale / position), rotate, flip |
+| Look | Filters (warm, cool, dramatic, vintage…), color, fades |
+| Transitions | Cut, fade, crossfade, slide, wipe, zoom, flash |
+| Text | Titles, neon, outline, stickers, auto captions |
+| Audio | Multi-track mix, voiceover, tones |
+| Export | FFmpeg HQ MP4 (audio + text burn-in) or WebM |
+| App | IndexedDB restore, Electron desktop shell |
+| Templates | Intro, captioned clip, vertical reel, outro |
 
 ## Run
 
-**Web (Chrome):**
 ```bash
+# Web (Chrome recommended)
 npx serve .
-```
 
-**Desktop:**
-```bash
+# Desktop
 npx electron .
 ```
 
-## Keyframes
-
-1. Select a clip  
-2. Set Scale / Position / Opacity  
-3. Click **Add keyframe at playhead**  
-4. Move playhead, change values, add another keyframe  
-
 ## License
 
-MIT — not affiliated with CapCut or ByteDance.
+MIT — **not affiliated with CapCut or ByteDance**.
