@@ -2,26 +2,35 @@
 
 **Privacy-first • No watermarks • Local-only • Open source**
 
-![Status](https://img.shields.io/badge/Status-v1.1%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-v1.2%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## v1.1 — FFmpeg-powered export
+## What’s in v1.2
 
-- **FFmpeg.wasm HQ MP4** — real H.264 encode in the browser
-- Quality presets (CRF 23 / 28 / 32)
-- Multi-clip timeline encode + concat
-- Fallback to browser WebM recorder
-- Multi-track audio mix, flips, fades, stickers, voiceover
-- CapCut-style dark UI
+- **Freeze frame** (button or `F`) — hold current frame 2s
+- **FFmpeg.wasm HQ MP4** export
+- Multi-track audio mix
+- Stickers, voiceover, flip, fade, speed presets
+- CapCut-style dark UI + pro timeline tools
 
 ## Quick Start
 
-Open `index.html` in **Chrome** (required for FFmpeg + codecs).
+Open `index.html` in **Chrome**.
 
 ```bash
 npx serve .
 ```
 
-First FFmpeg export downloads ~25MB of WASM (cached after that).
+## Shortcuts
+
+| Key | Action |
+|-----|--------|
+| Space | Play / Pause |
+| S | Split |
+| F | Freeze frame |
+| M | Marker |
+| Del | Delete |
+| Ctrl+D | Duplicate |
+| Alt+Left/Right | Nudge clip |
 
 ## License
 
