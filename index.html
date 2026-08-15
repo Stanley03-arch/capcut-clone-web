@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CapCut Clone - Web Video Editor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">✂️</span>
+        <span class="logo-text">CapCut Clone</span>
+      </div>
+      <div class="header-actions">
+        <button id="exportBtn" class="btn btn-primary" disabled>Export</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Left Sidebar - Media -->
+      <aside class="sidebar left-sidebar">
+        <h3>Media</h3>
+        <div class="upload-area" id="uploadArea">
+          <input type="file" id="videoInput" accept="video/*" hidden>
+          <div class="upload-prompt">
+            <span class="upload-icon">📁</span>
+            <p>Drop video here or click to upload</p>
+            <small>MP4, WebM, MOV supported</small>
+          </div>
+        </div>
+        <div id="mediaList" class="media-list"></div>
+      </aside>
+
+      <!-- Center - Preview -->
+      <section class="preview-area">
+        <div class="preview-container">
+          <video id="previewVideo" class="preview-video"></video>
+          <div class="preview-placeholder" id="placeholder">
+            <span>🎬</span>
+            <p>Upload a video to start editing</p>
+          </div>
+        </div>
+        <div class="playback-controls">
+          <button id="playPauseBtn" class="control-btn" disabled>▶️</button>
+          <span id="currentTime">0:00</span>
+          <input type="range" id="seekBar" min="0" max="100" value="0" disabled>
+          <span id="duration">0:00</span>
+        </div>
+      </section>
+
+      <!-- Right Sidebar - Tools -->
+      <aside class="sidebar right-sidebar">
+        <h3>Tools</h3>
+        <div class="tool-section">
+          <label>Speed</label>
+          <input type="range" id="speedControl" min="0.25" max="2" step="0.25" value="1" disabled>
+          <span id="speedValue">1x</span>
+        </div>
+        <div class="tool-section">
+          <label>Volume</label>
+          <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" disabled>
+        </div>
+        <div class="tool-section">
+          <label>Trim Start (s)</label>
+          <input type="number" id="trimStart" min="0" step="0.1" value="0" disabled>
+        </div>
+        <div class="tool-section">
+          <label>Trim End (s)</label>
+          <input type="number" id="trimEnd" min="0" step="0.1" value="0" disabled>
+        </div>
+        <div class="tool-section">
+          <label>Filter</label>
+          <select id="filterSelect" disabled>
+            <option value="none">None</option>
+            <option value="grayscale">Grayscale</option>
+            <option value="sepia">Sepia</option>
+            <option value="contrast">High Contrast</option>
+            <option value="brightness">Bright</option>
+            <option value="blur">Blur</option>
+          </select>
+        </div>
+        <button id="applyTrimBtn" class="btn btn-secondary" disabled>Apply Trim</button>
+      </aside>
+    </main>
+
+    <!-- Timeline -->
+    <footer class="timeline">
+      <div class="timeline-header">
+        <span>Timeline</span>
+        <div class="timeline-zoom">
+          <button id="zoomOut" class="control-btn">-</button>
+          <button id="zoomIn" class="control-btn">+</button>
+        </div>
+      </div>
+      <div class="timeline-tracks" id="timelineTracks">
+        <div class="track video-track">
+          <div class="track-label">Video</div>
+          <div class="track-content" id="videoTrack">
+            <div class="clip" id="mainClip" style="display:none;">
+              <span class="clip-name">Video Clip</span>
+            </div>
+          </div>
+        </div>
+        <div class="track audio-track">
+          <div class="track-label">Audio</div>
+          <div class="track-content"></div>
+        </div>
+      </div>
+      <div class="playhead" id="playhead"></div>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
