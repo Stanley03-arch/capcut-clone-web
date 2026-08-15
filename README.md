@@ -1,37 +1,35 @@
-# NovaCut App — CapCut Alternative
+# NovaCut Pro — CapCut-style Editor
 
 **Privacy-first • No watermarks • Local-only • Open source**
 
-![Status](https://img.shields.io/badge/Status-v1.3%20App-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-v1.4%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Run as a web app
+## v1.4 upgrades
 
+- **Keyframes** — opacity, scale, position over time
+- **FFmpeg export** — keeps **audio**, burns **text/captions** into MP4
+- IndexedDB media restore
+- Auto captions, freeze, stickers, voiceover
+- Electron desktop shell
+
+## Run
+
+**Web (Chrome):**
 ```bash
 npx serve .
 ```
 
-Open in **Chrome**.
-
-## Run as a desktop app (Electron)
-
+**Desktop:**
 ```bash
 npx electron .
 ```
 
-Or:
+## Keyframes
 
-```bash
-npm run desktop
-```
-
-## What’s in v1.3 App
-
-- **IndexedDB media persistence** — media + project restore after reload
-- **Auto captions** — Web Speech API → text track
-- **Electron desktop shell** — real window, menus, fullscreen
-- FFmpeg HQ MP4 export
-- Freeze frame, multi-track audio, stickers, voiceover
-- CapCut-style dark UI
+1. Select a clip  
+2. Set Scale / Position / Opacity  
+3. Click **Add keyframe at playhead**  
+4. Move playhead, change values, add another keyframe  
 
 ## License
 
