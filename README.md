@@ -2,49 +2,48 @@
 
 **Privacy-first • No watermarks • Local-only • Open source**
 
-![Status](https://img.shields.io/badge/Status-v0.4%20Beta-00e5b0) ![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-v0.5%20Beta-00e5b0) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Features (v0.4)
+## Features (v0.5)
 
 - Multi-track timeline (Video / Audio / Text)
-- **Mute / Solo** per track
-- **Magnetic snap** (toggleable)
-- **Edge trim** — drag left/right handles to trim clips
-- **Duplicate** clip (Ctrl+D)
-- **Playhead scrub** — click/drag on the ruler
-- **Load project** (JSON)
-- **Color adjust** — brightness, contrast, saturation
-- Transitions (None, Fade, Crossfade, Slide)
-- Text overlays with live styling
-- Speed, volume, duration controls
-- Effects filters
-- Waveforms on clips
-- Aspect ratios: 16:9, 9:16, 1:1, 4:5
-- Split / Delete / Add tracks
-- Undo / Redo
-- Zoom + Zoom to Fit
+- Mute / Solo per track
+- Magnetic snap (toggle)
+- **Edge trim** — drag handles
+- **Duplicate** (Ctrl+D)
+- **Playhead scrub** on ruler
+- **Load / Save** project + **auto-save** to localStorage
+- Color adjust + **opacity**
+- **Ripple delete** (close gap)
+- **Timeline markers** (M key / button)
+- **Fullscreen** preview
+- **Clip nudge** (Alt + left/right arrows)
+- Transitions, effects, text overlays
+- Waveforms, aspect ratios, split, undo/redo
+- Zoom + Fit
 - Multi-clip export to WebM
-- Keyboard: Space, Del, Ctrl+Z/Y/D, S (split), ←/→ (nudge)
 
 ## Quick Start
 
-Open `index.html` in **Chrome** (best support).
+Open `index.html` in **Chrome**.
 
 ```bash
 npx serve .
 ```
 
-## Roadmap
+## Shortcuts
 
-- [x] Edge trim / resize handles
-- [x] Duplicate
-- [x] Playhead scrubbing
-- [x] Load project
-- [x] Color controls
-- [ ] FFmpeg.wasm (high quality MP4)
-- [ ] Real audio waveform analysis
-- [ ] Auto captions
-- [ ] Desktop (Tauri)
+| Key | Action |
+|-----|--------|
+| Space | Play / Pause |
+| Del | Delete clip |
+| S | Split |
+| M | Add marker |
+| Ctrl+Z / Y | Undo / Redo |
+| Ctrl+D | Duplicate |
+| Left / Right | Nudge playhead |
+| Alt+Left / Right | Nudge selected clip |
+| Shift+arrows | Larger steps |
 
 ## License
 
