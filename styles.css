@@ -538,6 +538,12 @@ html, body {
 
 .tl-btn:hover { background: var(--hover); }
 
+.tl-btn.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
 .zoom-label {
   font-size: 11px;
   color: var(--muted);
@@ -655,6 +661,7 @@ html, body {
   position: relative;
   border-bottom: 1px solid var(--border);
   background: var(--panel);
+  cursor: pointer;
 }
 
 .ruler-mark {
@@ -727,6 +734,23 @@ html, body {
 .clip .clip-name {
   overflow: hidden;
   text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.clip .resize-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+  z-index: 5;
+}
+
+.clip .resize-handle.left { left: 0; }
+.clip .resize-handle.right { right: 0; }
+
+.clip .resize-handle:hover {
+  background: rgba(255,255,255,0.35);
 }
 
 .playhead {
@@ -754,6 +778,8 @@ html, body {
   background: var(--danger);
   border-radius: 2px;
   clip-path: polygon(50% 100%, 0 0, 100% 0);
+  pointer-events: auto;
+  cursor: ew-resize;
 }
 
 .modal {
