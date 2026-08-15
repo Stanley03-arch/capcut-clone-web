@@ -9,14 +9,13 @@
 </head>
 <body>
   <div class="app" id="app">
-    <!-- Top Bar -->
     <header class="topbar">
       <div class="topbar-left">
         <div class="logo">
           <span class="logo-mark">N</span>
           <span class="logo-text">NovaCut</span>
         </div>
-        <span class="version-badge">v0.2 Beta</span>
+        <span class="version-badge">v0.3 Beta</span>
       </div>
       <div class="topbar-center">
         <button class="tb-btn" id="undoBtn" title="Undo (Ctrl+Z)" disabled>↩ Undo</button>
@@ -28,14 +27,13 @@
       </div>
     </header>
 
-    <!-- Main Workspace -->
     <div class="workspace">
-      <!-- Left Panel: Media + Assets -->
       <aside class="panel left-panel">
         <div class="panel-tabs">
           <button class="tab active" data-tab="media">Media</button>
           <button class="tab" data-tab="text">Text</button>
           <button class="tab" data-tab="effects">Effects</button>
+          <button class="tab" data-tab="trans">Trans</button>
         </div>
 
         <div class="tab-content active" id="tab-media">
@@ -71,9 +69,23 @@
             <button class="effect-item" data-filter="invert">Invert</button>
           </div>
         </div>
+
+        <div class="tab-content" id="tab-trans">
+          <p class="hint-text">Select a clip then choose a transition</p>
+          <div class="effect-list">
+            <button class="effect-item trans-item active" data-trans="none">None / Cut</button>
+            <button class="effect-item trans-item" data-trans="fade">Fade</button>
+            <button class="effect-item trans-item" data-trans="crossfade">Crossfade</button>
+            <button class="effect-item trans-item" data-trans="slide">Slide</button>
+          </div>
+          <div class="insp-group" style="margin-top:12px">
+            <label>Transition Duration</label>
+            <input type="range" id="transDur" min="0.2" max="2" step="0.1" value="0.5">
+            <div class="value-display" id="transDurVal">0.5s</div>
+          </div>
+        </div>
       </aside>
 
-      <!-- Center: Preview -->
       <section class="preview-section">
         <div class="preview-toolbar">
           <select id="aspectSelect">
@@ -108,7 +120,6 @@
         </div>
       </section>
 
-      <!-- Right Panel: Inspector -->
       <aside class="panel right-panel">
         <h3 class="panel-title">Inspector</h3>
         <div id="inspector" class="inspector">
@@ -117,7 +128,6 @@
       </aside>
     </div>
 
-    <!-- Timeline -->
     <footer class="timeline-section">
       <div class="timeline-toolbar">
         <div class="tl-left">
@@ -146,7 +156,6 @@
     </footer>
   </div>
 
-  <!-- Export Modal -->
   <div class="modal" id="exportModal" hidden>
     <div class="modal-content">
       <h2>Export Video</h2>
