@@ -2,33 +2,26 @@
 
 **Privacy-first • No watermarks • Local-only • Open source**
 
-![Status](https://img.shields.io/badge/Status-v1.0%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-v1.1%20Pro-00f5c4) ![License](https://img.shields.io/badge/License-MIT-green)
 
-## Why it’s more powerful (v1.0)
+## v1.1 — FFmpeg-powered export
 
-- **Multi-track audio mix** — video + audio + voiceover play together
-- **Live clip visuals** — flip, fade in/out, opacity, color while scrubbing
-- **Composition layer** — canvas overlay + safe-area guides
-- **Stickers & text** — emoji stickers, neon/outline styles
-- **Voiceover recording** — mic capture straight to the timeline
-- **CapCut-style dark UI** — pure black, teal accent, dense timeline
-- **Pro timeline tools** — edge trim, ripple delete, markers, snap, nudge
-- **Project name + auto-save** — structure persists in localStorage
+- **FFmpeg.wasm HQ MP4** — real H.264 encode in the browser
+- Quality presets (CRF 23 / 28 / 32)
+- Multi-clip timeline encode + concat
+- Fallback to browser WebM recorder
+- Multi-track audio mix, flips, fades, stickers, voiceover
+- CapCut-style dark UI
 
 ## Quick Start
 
-Open `index.html` in **Chrome** (best codec support).
+Open `index.html` in **Chrome** (required for FFmpeg + codecs).
 
 ```bash
 npx serve .
 ```
 
-## Roadmap
-
-- [ ] FFmpeg.wasm high-quality MP4 export
-- [ ] IndexedDB media persistence
-- [ ] Auto captions (Web Speech)
-- [ ] Desktop shell (Tauri / Electron)
+First FFmpeg export downloads ~25MB of WASM (cached after that).
 
 ## License
 
