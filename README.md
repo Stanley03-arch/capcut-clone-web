@@ -6,6 +6,8 @@
 
 > **Honest note:** This is **not** a full CapCut clone. CapCut is a commercial product with native apps, AI, cloud, and huge asset libraries. NovaCut is a strong **CapCut-inspired** open-source editor for the browser (and Electron).
 
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## CapCut-like features in v2.0
 
 | Area | Features |
@@ -24,10 +26,12 @@
 
 ```bash
 # Web (Chrome recommended)
-npx serve .
+npm start
+# or: npx serve . -p 5173
 
 # Desktop
-npx electron .
+npm run desktop
+# or: npx electron .
 ```
 
 ## License
