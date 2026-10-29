@@ -1,6 +1,6 @@
 {
   "name": "novacut",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "NovaCut Pro — privacy-first CapCut-style video editor",
   "main": "electron-main.js",
   "scripts": {
